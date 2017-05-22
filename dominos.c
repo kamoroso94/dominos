@@ -7,7 +7,6 @@ typedef struct Domino {
 
 typedef enum {false, true} bool;
 
-void findBestChain(int handSize);
 void getDominos(Domino *start, Domino *list, int amount);
 int getChain(Domino *start, Domino *list, int *map, int amount);
 int _getChain(Domino *start, Domino *list, int *tempMap, int *chainMap, bool *visited, int amount, int index, int maxSize);
