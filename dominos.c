@@ -17,32 +17,32 @@ void printChain(Domino *list, int *chainMap, int amount);
 
 int main(int argc, char *argv[]) {
     int handSize;
-	Domino *dominos;
+    Domino *dominos;
     Domino start;
     int *chainMap;
     int chainSize;
-	
-	if(argc - 1 != 1) {
-		fprintf(stderr, "Expected one command line argument!\n");
-		return 1;
-	}
-	
-	handSize = atoi(argv[1]);
-	
-	if(handSize <= 0) {
-		fprintf(stderr, "Argument must be a positive integer!\n");
-		return 1;
-	}
-	
-	dominos = malloc(handSize * sizeof(Domino));
-	chainMap = malloc(handSize * sizeof(int));
-	
+    
+    if(argc - 1 != 1) {
+        fprintf(stderr, "Expected one command line argument!\n");
+        return 1;
+    }
+    
+    handSize = atoi(argv[1]);
+    
+    if(handSize <= 0) {
+        fprintf(stderr, "Argument must be a positive integer!\n");
+        return 1;
+    }
+    
+    dominos = malloc(handSize * sizeof(Domino));
+    chainMap = malloc(handSize * sizeof(int));
+    
     getDominos(&start, dominos, handSize);
     chainSize = getChain(&start, dominos, chainMap, handSize);
     printChain(dominos, chainMap, chainSize);
-	
-	free(dominos);
-	free(chainMap);
+    
+    free(dominos);
+    free(chainMap);
     
     return 0;
 }
