@@ -13,7 +13,7 @@ and simply insert it anywhere into the resulting chain displayed at the end of t
 gcc -o dominos dominos.c
 ```
 
-# How to Run
+## How to Run
 Supply the number of dominos you start off with in your hand as a command line argument.
 ```
 ./dominos 15
